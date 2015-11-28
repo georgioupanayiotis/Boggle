@@ -1,0 +1,133 @@
+<resources>
+    <string name="app_name">boggle</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="dice1">
+        <item>A</item>
+        <item>A</item>
+        <item>E</item>
+        <item>E</item>
+        <item>G</item>
+        <item>N</item>
+    </string-array>
+    <string-array name="dice2">
+        <item>A</item>
+        <item>B</item>
+        <item>B</item>
+        <item>J</item>
+        <item>O</item>
+        <item>O</item>
+    </string-array>
+    <string-array name="dice3">
+        <item>A</item>
+        <item>C</item>
+        <item>H</item>
+        <item>O</item>
+        <item>P</item>
+        <item>S</item>
+    </string-array>
+    <string-array name="dice4">
+        <item>A</item>
+        <item>F</item>
+        <item>F</item>
+        <item>K</item>
+        <item>P</item>
+        <item>S</item>
+    </string-array>
+    <string-array name="dice5">
+        <item>A</item>
+        <item>O</item>
+        <item>O</item>
+        <item>T</item>
+        <item>T</item>
+        <item>W</item>
+    </string-array>
+    <string-array name="dice6">
+        <item>C</item>
+        <item>I</item>
+        <item>M</item>
+        <item>O</item>
+        <item>T</item>
+        <item>U</item>
+    </string-array>
+    <string-array name="dice7">
+        <item>D</item>
+        <item>E</item>
+        <item>I</item>
+        <item>L</item>
+        <item>R</item>
+        <item>X</item>
+    </string-array>
+    <string-array name="dice8">
+        <item>D</item>
+        <item>E</item>
+        <item>L</item>
+        <item>R</item>
+        <item>V</item>
+        <item>Y</item>
+    </string-array>
+    <string-array name="dice9">
+        <item>D</item>
+        <item>I</item>
+        <item>S</item>
+        <item>T</item>
+        <item>T</item>
+        <item>Y</item>
+    </string-array>
+    <string-array name="dice10">
+        <item>E</item>
+        <item>E</item>
+        <item>G</item>
+        <item>H</item>
+        <item>N</item>
+        <item>W</item>
+    </string-array>
+    <string-array name="dice11">
+        <item>E</item>
+        <item>E</item>
+        <item>I</item>
+        <item>N</item>
+        <item>S</item>
+        <item>U</item>
+    </string-array>
+    <string-array name="dice12">
+        <item>E</item>
+        <item>H</item>
+        <item>R</item>
+        <item>T</item>
+        <item>V</item>
+        <item>W</item>
+    </string-array>
+    <string-array name="dice13">
+        <item>E</item>
+        <item>I</item>
+        <item>O</item>
+        <item>S</item>
+        <item>S</item>
+        <item>T</item>
+    </string-array>
+    <string-array name="dice14">
+        <item>E</item>
+        <item>L</item>
+        <item>R</item>
+        <item>T</item>
+        <item>T</item>
+        <item>Y</item>
+    </string-array>
+    <string-array name="dice15">
+        <item>H</item>
+        <item>I</item>
+        <item>M</item>
+        <item>N</item>
+        <item>U</item>
+        <item>Qu</item>
+    </string-array>
+    <string-array name="dice16">
+        <item>H</item>
+        <item>L</item>
+        <item>N</item>
+        <item>N</item>
+        <item>R</item>
+        <item>Z</item>
+    </string-array>
+
+</resources>

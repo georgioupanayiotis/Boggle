@@ -5,10 +5,8 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 /**
- * Created by nejasix on 11/27/15.
+ * A Custom TextView that adds identification for dice number.
  */
 public class DiceView extends TextView {
 

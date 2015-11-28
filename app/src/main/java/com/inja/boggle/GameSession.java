@@ -7,6 +7,7 @@ import java.util.Stack;
 /**
  * Created by nejasix on 11/27/15.
  */
+//UNUSED:
 public class GameSession
 {
     private int currentScore = 0;

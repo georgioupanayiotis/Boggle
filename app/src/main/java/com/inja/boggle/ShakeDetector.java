@@ -5,6 +5,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.util.Log;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -28,26 +29,30 @@ public class ShakeDetector implements SensorEventListener {
         }
     }
 
-    interface ShakeCallBack {
+    public void stop() {
+        mSensorManager.unregisterListener(this);
+    }
+
+    interface Shakecallback {
         void onShake();
     }
 
-    public void register(ShakeCallBack shakeCallBack)
+    public void register(Shakecallback shakecallback)
     {
-        callBacks.add(shakeCallBack);
+        callBacks.add(shakecallback);
     }
 
-    public void unregister(ShakeCallBack shakeCallBack)
+    public void unregister(Shakecallback shakecallback)
     {
-        callBacks.remove(shakeCallBack);
+        callBacks.remove(shakecallback);
     }
 
     private boolean init;
     private Sensor mAccelerometer;
     private SensorManager mSensorManager;
-    private float x1, x2, x3;
-    private static final float ERROR =  5f;
-    private List<ShakeCallBack> callBacks;
+    private float x, y, z;
+    private static final float ERROR =  4f;
+    private List<Shakecallback> callBacks;
     private Context mContext;
 
     public ShakeDetector(Context context)
@@ -67,15 +72,18 @@ public class ShakeDetector implements SensorEventListener {
 
 
         if (!init) {
-            x1 = x;
-            x2 = y;
-            x3 = z;
+            this.x = x;
+            this.y = y;
+            this.z = z;
             init = true;
         } else {
 
-            float diffX = Math.abs(x1 - x);
-            float diffY = Math.abs(x2 - y);
-            float diffZ = Math.abs(x3 - z);
+            float diffX = Math.abs(this.x - x);
+          //  Log.d("TAG", "sens dif = " + diffX);
+            float diffY = Math.abs(this.y - y);
+          //  Log.d("TAG", "sens dif = " + diffY);
+            float diffZ = Math.abs(this.z - z);
+           // Log.d("TAG", "sens dif = " + diffZ);
 
             //Handling ACCELEROMETER Noise
             if (diffX < ERROR) {
@@ -91,14 +99,14 @@ public class ShakeDetector implements SensorEventListener {
             }
 
 
-            x1 = x;
-            x2 = y;
-            x3 = z;
+            this.x = x;
+            this.y = y;
+            this.z = z;
 
 
             //Horizontal Shake Detected!
             if (diffX > diffY && diffX > diffZ) {
-                for ( ShakeCallBack callBack : callBacks){
+                for ( Shakecallback callBack : callBacks){
                     callBack.onShake();
                 }
             }

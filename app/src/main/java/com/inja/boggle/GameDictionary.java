@@ -15,17 +15,18 @@ import java.util.Set;
 /**
  * Created by nejasix on 11/27/15.
  */
-public class Game {
+public class GameDictionary {
 
     private Context mContext;
 
     private Set<String> words;
 
-    public Game(Context context)
+    public GameDictionary(Context context)
     {
         this.words = new HashSet<>();
         this.mContext = context;
         //FIXME : This should provide a callback in case it's too big.
+        //Loading dictionary.
         AsyncTask.execute(new Runnable() {
             @Override
             public void run() {
@@ -46,64 +47,63 @@ public class Game {
         });
     }
 
-    public boolean isWord(String st)
+    public boolean isWordValid(String st)
     {
         return this.words.contains(st.toLowerCase());
     }
 
 
-
-    public String getCharacter(int diceNumber)
+    public String getCharacterForDice(int diceNumber)
     {
         int resource = -1;
         switch (diceNumber)
         {
-            case 1:
+            case 0:
                 resource = R.array.dice1;
                 break;
-            case 2:
+            case 1:
                 resource = R.array.dice2;
                 break;
-            case 3:
+            case 2:
                 resource = R.array.dice3;
                 break;
-            case 4:
+            case 3:
                 resource = R.array.dice4;
                 break;
-            case 5:
+            case 4:
                 resource = R.array.dice5;
                 break;
-            case 6:
+            case 5:
                 resource = R.array.dice6;
                 break;
-            case 7:
+            case 6:
                 resource = R.array.dice7;
                 break;
-            case 8:
+            case 7:
                 resource = R.array.dice8;
                 break;
-            case 9:
+            case 8:
                 resource = R.array.dice9;
                 break;
-            case 10:
+            case 9:
                 resource = R.array.dice10;
                 break;
-            case 11:
+            case 10:
                 resource = R.array.dice11;
                 break;
-            case 12:
+            case 11:
                 resource = R.array.dice12;
                 break;
-            case 13:
+            case 12:
                 resource = R.array.dice13;
                 break;
-            case 14:
+            case 13:
                 resource = R.array.dice14;
                 break;
-            case 15:
+            case 14:
                 resource = R.array.dice15;
                 break;
-            case 16:
+            case 15:
                 resource = R.array.dice16;
                 break;
 
